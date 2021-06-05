@@ -1,3 +1,7 @@
+:root {
+  --cell-padding:  20px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -23,8 +27,7 @@ h1 {
 
 .cell {
   border: 1px solid black;
-  float:  left;
-  margin: 5px;
+  margin: var(--cell-padding);
   background-color: grey;
 }
 
@@ -70,7 +73,7 @@ p {
 @media (min-width: 992px) {
   .col-lg {
     float: left;
-    width:  calc(33.33% - 10px);
+    width:  calc(33.33% - 2 * var(--cell-padding));
   }
 }
 
@@ -78,12 +81,12 @@ p {
 @media (min-width: 768px) and (max-width: 991px) {
   .col-md-12 {
     float: left;
-    width:  calc(100% - 10px);
+    width:  calc(100% - 2 * var(--cell-padding));
   }
 
   .col-md-6 {
     float: left;
-    width:  calc(50% - 10px);
+    width:  calc(50% - 2 * var(--cell-padding));
   }
 }
 
@@ -91,6 +94,6 @@ p {
 @media (max-width: 767px) {
   .col-sm {
     float:  left;
-    width: calc(100% - 10px);
+    width: calc(100% - 2 * var(--cell-padding));
   }
 }
